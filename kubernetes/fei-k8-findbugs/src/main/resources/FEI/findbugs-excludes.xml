@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FindBugsFilter>
+
+  <!-- exclude generated code -->
+	<Match>
+		<Package name="~.*\.generated(\..*)?" />
+	</Match>
+
+	<!-- exclude checking generated JPA 2 static models -->
+	<Match>
+		<Package name="~.*\.entity(\..*)?" />
+		<Class name="~.*_$" />
+	</Match>
+
+	<!-- do not need to worry about security specific warnings in test code -->
+	<Match>
+		<Package name="~.*\.test" />
+		<Bug pattern="MS_EXPOSE_REP" />
+	</Match>
+</FindBugsFilter>

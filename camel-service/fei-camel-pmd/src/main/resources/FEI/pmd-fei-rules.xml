@@ -1,0 +1,2106 @@
+<?xml version="1.0"?>
+
+<ruleset name="FEI Java Rules" xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <!--rule ref="rulesets/java/android.xml"/ -->
+  <rule ref="rulesets/java/basic.xml/JumbledIncrementer" />
+  <!--rule ref="rulesets/java/basic.xml/ForLoopShouldBeWhileLoop"/ -->
+  <rule ref="rulesets/java/basic.xml/OverrideBothEqualsAndHashcode" />
+  <rule ref="rulesets/java/basic.xml/DoubleCheckedLocking" />
+  <rule ref="rulesets/java/basic.xml/ReturnFromFinallyBlock" />
+  <!--rule ref="rulesets/java/basic.xml/UnconditionalIfStatement"/ -->
+  <rule ref="rulesets/java/basic.xml/BooleanInstantiation" />
+  <!--rule ref="rulesets/java/basic.xml/CollapsibleIfStatements"/ -->
+  <rule ref="rulesets/java/basic.xml/ClassCastExceptionWithToArray" />
+  <rule
+    ref="rulesets/java/basic.xml/AvoidDecimalLiteralsInBigDecimalConstructor" />
+  <rule ref="rulesets/java/basic.xml/MisplacedNullCheck" />
+  <rule ref="rulesets/java/basic.xml/AvoidThreadGroup" />
+  <rule ref="rulesets/java/basic.xml/BrokenNullCheck" />
+  <rule ref="rulesets/java/basic.xml/BigIntegerInstantiation" />
+  <rule ref="rulesets/java/basic.xml/AvoidUsingOctalValues" />
+  <!-- this this blocks integration testing with virtualbox in eclipse due to defaults in test-utils
+  <rule ref="rulesets/java/basic.xml/AvoidUsingHardCodedIP" />
+  -->
+  <rule ref="rulesets/java/basic.xml/CheckResultSet" />
+  <rule ref="rulesets/java/basic.xml/AvoidMultipleUnaryOperators" />
+  <rule ref="rulesets/java/basic.xml/ExtendsObject" />
+  <rule ref="rulesets/java/basic.xml/CheckSkipResult" />
+  <rule ref="rulesets/java/basic.xml/AvoidBranchingStatementAsLastInLoop" />
+  <rule ref="rulesets/java/basic.xml/DontCallThreadRun" />
+  <rule ref="rulesets/java/basic.xml/DontUseFloatTypeForLoopIndices" />
+  <rule ref="rulesets/java/braces.xml/IfStmtsMustUseBraces" />
+  <rule ref="rulesets/java/braces.xml/WhileLoopsMustUseBraces" />
+  <rule ref="rulesets/java/braces.xml/IfElseStmtsMustUseBraces" />
+  <rule ref="rulesets/java/braces.xml/ForLoopsMustUseBraces" />
+  <rule ref="rulesets/java/clone.xml/ProperCloneImplementation" />
+  <rule ref="rulesets/java/clone.xml/CloneThrowsCloneNotSupportedException" />
+  <rule ref="rulesets/java/clone.xml/CloneMethodMustImplementCloneable" />
+  <!--rule ref="rulesets/java/codesize.xml"/ -->
+  <!--rule ref="rulesets/java/comments.xml"/ -->
+  <!--rule ref="rulesets/java/controversial.xml/UnnecessaryConstructor"/ -->
+  <!--rule ref="rulesets/java/controversial.xml/NullAssignment"/ -->
+  <!--rule ref="rulesets/java/controversial.xml/OnlyOneReturn"/ -->
+  <!--rule ref="rulesets/java/controversial.xml/AssignmentInOperand"/ -->
+  <!--rule ref="rulesets/java/controversial.xml/AtLeastOneConstructor"/ -->
+  <rule ref="rulesets/java/controversial.xml/DontImportSun" />
+  <rule ref="rulesets/java/controversial.xml/SuspiciousOctalEscape" />
+  <rule ref="rulesets/java/controversial.xml/CallSuperInConstructor" />
+  <!--rule ref="rulesets/java/controversial.xml/UnnecessaryParentheses"/ -->
+  <!--rule ref="rulesets/java/controversial.xml/DefaultPackage" / -->
+  <!--rule ref="rulesets/java/controversial.xml/DataflowAnomalyAnalysis"/ -->
+  <!--rule ref="rulesets/java/controversial.xml/AvoidFinalLocalVariable"/ -->
+  <!--rule ref="rulesets/java/controversial.xml/AvoidUsingShortType"/ -->
+  <!--rule ref="rulesets/java/controversial.xml/AvoidUsingVolatile"/ -->
+  <!--rule ref="rulesets/java/controversial.xml/AvoidUsingNativeCode"/ -->
+  <rule ref="rulesets/java/controversial.xml/AvoidAccessibilityAlteration" />
+  <rule
+    ref="rulesets/java/controversial.xml/DoNotCallGarbageCollectionExplicitly" />
+  <rule ref="rulesets/java/controversial.xml/OneDeclarationPerLine">
+    <properties>
+      <property name="strictMode" value="true" />
+    </properties>
+  </rule>
+  <!--rule ref="rulesets/java/controversial.xml/AvoidPrefixingMethodParameters"/ -->
+  <!--rule ref="rulesets/java/controversial.xml/AvoidLiteralsInIfCondition"/ -->
+  <!--rule ref="rulesets/java/controversial.xml/UseObjectForClearerAPI"/ -->
+  <!--rule ref="rulesets/java/controversial.xml/UseConcurrentHashMap"/ -->
+  <!--rule ref="rulesets/java/coupling.xml/CouplingBetweenObjects"/ -->
+  <!--rule ref="rulesets/java/coupling.xml/ExcessiveImports"/ -->
+  <!-- rule ref="rulesets/java/coupling.xml/LooseCoupling" / -->
+  <!--rule ref="rulesets/java/coupling.xml/LoosePackageCoupling"/ -->
+  <!--rule ref="rulesets/java/coupling.xml/LawOfDemeter"/ -->
+  <rule ref="rulesets/java/design.xml/UseUtilityClass">
+    <properties>
+      <property name="violationSuppressXPath" value="//ClassOrInterfaceDeclaration[@Image='ArquillianHelper' or preceding-sibling::Annotation/MarkerAnnotation/Name[@Image='SpringBootApplication']]" />
+    </properties>
+  </rule>
+  <rule ref="rulesets/java/design.xml/SimplifyBooleanReturns" />
+  <rule ref="rulesets/java/design.xml/SimplifyBooleanExpressions" />
+  <!--rule ref="rulesets/java/design.xml/SwitchStmtsShouldHaveDefault"/ -->
+  <rule ref="rulesets/java/design.xml/AvoidDeeplyNestedIfStmts" />
+  <rule ref="rulesets/java/design.xml/AvoidReassigningParameters" />
+  <!--rule ref="rulesets/java/design.xml/SwitchDensity"/ -->
+  <rule ref="rulesets/java/design.xml/ConstructorCallsOverridableMethod" />
+  <rule ref="rulesets/java/design.xml/AccessorClassGeneration" />
+  <rule ref="rulesets/java/design.xml/FinalFieldCouldBeStatic" />
+  <rule ref="rulesets/java/design.xml/CloseResource" />
+  <rule ref="rulesets/java/design.xml/NonStaticInitializer" />
+  <rule ref="rulesets/java/design.xml/DefaultLabelNotLastInSwitchStmt" />
+  <rule ref="rulesets/java/design.xml/NonCaseLabelInSwitchStatement" />
+  <rule ref="rulesets/java/design.xml/OptimizableToArrayCall" />
+  <rule ref="rulesets/java/design.xml/BadComparison" />
+  <rule ref="rulesets/java/design.xml/EqualsNull" />
+  <!--rule ref="rulesets/java/design.xml/ConfusingTernary"/ -->
+  <rule ref="rulesets/java/design.xml/InstantiationToGetClass" />
+  <rule ref="rulesets/java/design.xml/IdempotentOperations" />
+  <!--rule ref="rulesets/java/design.xml/SimpleDateFormatNeedsLocale"/ -->
+  <rule ref="rulesets/java/design.xml/ImmutableField" />
+  <!--rule ref="rulesets/java/design.xml/UseLocaleWithCaseConversions"/ -->
+  <rule ref="rulesets/java/design.xml/AvoidProtectedFieldInFinalClass" />
+  <rule ref="rulesets/java/design.xml/AssignmentToNonFinalStatic" />
+  <rule
+    ref="rulesets/java/design.xml/MissingStaticMethodInNonInstantiatableClass" />
+  <rule ref="rulesets/java/design.xml/AvoidSynchronizedAtMethodLevel" />
+  <rule ref="rulesets/java/design.xml/MissingBreakInSwitch" />
+  <rule ref="rulesets/java/design.xml/UseNotifyAllInsteadOfNotify" />
+  <rule ref="rulesets/java/design.xml/AvoidInstanceofChecksInCatchClause" />
+  <!--rule ref="rulesets/java/design.xml/AbstractClassWithoutAbstractMethod"/ -->
+  <rule ref="rulesets/java/design.xml/SimplifyConditional" />
+  <rule ref="rulesets/java/design.xml/CompareObjectsWithEquals" />
+  <!--rule ref="rulesets/java/design.xml/PositionLiteralsFirstInComparisons"/ -->
+  <!--rule ref="rulesets/java/design.xml/PositionLiteralsFirstInCaseInsensitiveComparisons"/ -->
+  <rule ref="rulesets/java/design.xml/UnnecessaryLocalBeforeReturn" />
+  <rule ref="rulesets/java/design.xml/NonThreadSafeSingleton" />
+  <!--rule ref="rulesets/java/design.xml/UncommentedEmptyMethodBody"/ -->
+  <!--rule ref="rulesets/java/design.xml/UncommentedEmptyConstructor"/ -->
+  <rule ref="rulesets/java/design.xml/AvoidConstantsInterface" />
+  <rule ref="rulesets/java/design.xml/UnsynchronizedStaticDateFormatter" />
+  <rule ref="rulesets/java/design.xml/PreserveStackTrace" />
+  <rule ref="rulesets/java/design.xml/UseCollectionIsEmpty" />
+  <rule
+    ref="rulesets/java/design.xml/ClassWithOnlyPrivateConstructorsShouldBeFinal" />
+  <!--rule ref="rulesets/java/design.xml/EmptyMethodInAbstractClassShouldBeAbstract"/ -->
+  <rule ref="rulesets/java/design.xml/SingularField">
+    <properties>
+      <property name="checkInnerClasses" value="true" />
+    </properties>
+  </rule>
+  <rule ref="rulesets/java/design.xml/ReturnEmptyArrayRatherThanNull" />
+  <rule ref="rulesets/java/design.xml/AbstractClassWithoutAnyMethod" />
+  <!--rule ref="rulesets/java/design.xml/TooFewBranchesForASwitchStatement"/ -->
+  <!--rule ref="rulesets/java/design.xml/LogicInversion"/ -->
+  <!--rule ref="rulesets/java/design.xml/UseVarargs"/ -->
+  <!--rule ref="rulesets/java/design.xml/FieldDeclarationsShouldBeAtStartOfClass"/ -->
+  <rule
+    ref="rulesets/java/design.xml/AvoidProtectedMethodInFinalClassNotExtending" />
+  <rule ref="rulesets/java/empty.xml/EmptyCatchBlock">
+    <properties>
+      <property name="allowCommentedBlocks" value="true" />
+    </properties>
+  </rule>
+  <rule ref="rulesets/java/empty.xml/EmptyIfStmt" />
+  <rule ref="rulesets/java/empty.xml/EmptyWhileStmt" />
+  <rule ref="rulesets/java/empty.xml/EmptyTryBlock" />
+  <rule ref="rulesets/java/empty.xml/EmptyFinallyBlock" />
+  <rule ref="rulesets/java/empty.xml/EmptySwitchStatements" />
+  <rule ref="rulesets/java/empty.xml/EmptySynchronizedBlock" />
+  <rule ref="rulesets/java/empty.xml/EmptyStatementNotInLoop" />
+  <rule ref="rulesets/java/empty.xml/EmptyInitializer" />
+  <rule ref="rulesets/java/empty.xml/EmptyStatementBlock" />
+  <rule ref="rulesets/java/empty.xml/EmptyStaticInitializer" />
+  <rule ref="rulesets/java/finalizers.xml" />
+  <rule ref="rulesets/java/imports.xml/DuplicateImports" />
+  <rule ref="rulesets/java/imports.xml/DontImportJavaLang" />
+  <rule ref="rulesets/java/imports.xml/UnusedImports" />
+  <rule ref="rulesets/java/imports.xml/ImportFromSamePackage" />
+  <!--rule ref="rulesets/java/imports.xml/TooManyStaticImports"/ -->
+  <rule ref="rulesets/java/imports.xml/UnnecessaryFullyQualifiedName" />
+  <rule ref="rulesets/java/j2ee.xml/UseProperClassLoader" />
+  <rule ref="rulesets/java/j2ee.xml/MDBAndSessionBeanNamingConvention" />
+  <rule ref="rulesets/java/j2ee.xml/RemoteSessionInterfaceNamingConvention" />
+  <rule ref="rulesets/java/j2ee.xml/LocalInterfaceSessionNamingConvention" />
+  <rule ref="rulesets/java/j2ee.xml/LocalHomeNamingConvention" />
+  <rule ref="rulesets/java/j2ee.xml/RemoteInterfaceNamingConvention" />
+  <rule ref="rulesets/java/j2ee.xml/StaticEJBFieldShouldBeFinal" />
+  <!--rule ref="rulesets/java/javabeans.xml/BeanMembersShouldSerialize"/ -->
+  <rule ref="rulesets/java/javabeans.xml/MissingSerialVersionUID" />
+  <!--  rule ref="rulesets/java/junit.xml/JUnitAssertionsShouldIncludeMessage" /-->
+  <rule ref="rulesets/java/junit.xml/TestClassWithoutTestCases" />
+  <rule ref="rulesets/java/junit.xml/UnnecessaryBooleanAssertion" />
+  <rule ref="rulesets/java/junit.xml/UseAssertEqualsInsteadOfAssertTrue" />
+  <rule ref="rulesets/java/junit.xml/UseAssertSameInsteadOfAssertTrue" />
+  <rule ref="rulesets/java/junit.xml/UseAssertNullInsteadOfAssertTrue" />
+  <rule ref="rulesets/java/junit.xml/SimplifyBooleanAssertion" />
+  <rule ref="rulesets/java/logging-java.xml/MoreThanOneLogger" />
+  <rule ref="rulesets/java/logging-java.xml/LoggerIsNotStaticFinal" />
+  <!--rule ref="rulesets/java/logging-java.xml/GuardLogStatementJavaUtil"/ -->
+  <rule ref="rulesets/java/migrating.xml/ReplaceVectorWithList" />
+  <rule ref="rulesets/java/migrating.xml/ReplaceHashtableWithMap" />
+  <rule ref="rulesets/java/migrating.xml/ReplaceEnumerationWithIterator" />
+  <rule ref="rulesets/java/migrating.xml/AvoidEnumAsIdentifier" />
+  <rule ref="rulesets/java/migrating.xml/AvoidAssertAsIdentifier" />
+  <rule ref="rulesets/java/migrating.xml/IntegerInstantiation" />
+  <rule ref="rulesets/java/migrating.xml/ByteInstantiation" />
+  <rule ref="rulesets/java/migrating.xml/ShortInstantiation" />
+  <rule ref="rulesets/java/migrating.xml/LongInstantiation" />
+  <rule ref="rulesets/java/migrating.xml/JUnit4TestShouldUseBeforeAnnotation" />
+  <rule ref="rulesets/java/migrating.xml/JUnit4TestShouldUseAfterAnnotation" />
+  <rule ref="rulesets/java/migrating.xml/JUnit4TestShouldUseTestAnnotation" />
+  <rule ref="rulesets/java/migrating.xml/JUnit4SuitesShouldUseSuiteAnnotation" />
+  <rule ref="rulesets/java/migrating.xml/JUnitUseExpected" />
+  <rule ref="rulesets/java/naming.xml/ShortMethodName" />
+  <rule ref="rulesets/java/naming.xml/VariableNamingConventions" />
+  <rule ref="rulesets/java/naming.xml/MethodNamingConventions" />
+  <rule ref="rulesets/java/naming.xml/ClassNamingConventions" />
+  <rule ref="rulesets/java/naming.xml/AbstractNaming" />
+  <rule ref="rulesets/java/naming.xml/AvoidDollarSigns" />
+  <rule ref="rulesets/java/naming.xml/MethodWithSameNameAsEnclosingClass" />
+  <rule ref="rulesets/java/naming.xml/SuspiciousHashcodeMethodName" />
+  <rule ref="rulesets/java/naming.xml/SuspiciousConstantFieldName" />
+  <rule ref="rulesets/java/naming.xml/SuspiciousEqualsMethodName" />
+  <rule ref="rulesets/java/naming.xml/AvoidFieldNameMatchingTypeName" />
+  <!-- rule ref="rulesets/java/naming.xml/AvoidFieldNameMatchingMethodName" -->
+  <rule ref="rulesets/java/naming.xml/NoPackage" />
+  <rule ref="rulesets/java/naming.xml/PackageCase" />
+  <rule ref="rulesets/java/naming.xml/MisleadingVariableName" />
+  <rule ref="rulesets/java/naming.xml/BooleanGetMethodName" />
+  <!--rule ref="rulesets/java/naming.xml/ShortClassName"/ -->
+  <rule ref="rulesets/java/naming.xml/GenericsNaming" />
+
+  <rule ref="rulesets/java/optimizations.xml/LocalVariableCouldBeFinal" />
+  <rule ref="rulesets/java/optimizations.xml/MethodArgumentCouldBeFinal" />
+  <rule ref="rulesets/java/optimizations.xml/UseArrayListInsteadOfVector" />
+  <!-- rule ref="rulesets/java/optimizations.xml/SimplifyStartsWith"/ -->
+  <rule ref="rulesets/java/optimizations.xml/UseArraysAsList" />
+  <rule ref="rulesets/java/optimizations.xml/AvoidArrayLoops" />
+  <rule
+    ref="rulesets/java/optimizations.xml/UnnecessaryWrapperObjectCreation" />
+  <rule ref="rulesets/java/optimizations.xml/AddEmptyString" />
+  <rule ref="rulesets/java/optimizations.xml/RedundantFieldInitializer" />
+  <rule ref="rulesets/java/optimizations.xml/PrematureDeclaration" />
+
+  <rule ref="rulesets/java/strictexception.xml/AvoidCatchingThrowable" />
+  <rule ref="rulesets/java/strictexception.xml/ExceptionAsFlowControl" />
+  <!--rule ref="rulesets/java/strictexception.xml/AvoidCatchingNPE" / -->
+  <rule ref="rulesets/java/strictexception.xml/AvoidThrowingNullPointerException" />
+  <!--rule ref="rulesets/java/strictexception.xml/AvoidRethrowingException" / -->
+  <rule ref="rulesets/java/strictexception.xml/DoNotExtendJavaLangError" />
+  <rule ref="rulesets/java/strictexception.xml/DoNotThrowExceptionInFinally" />
+  <rule
+    ref="rulesets/java/strictexception.xml/AvoidThrowingNewInstanceOfSameException" />
+  <!--rule ref="rulesets/java/strictexception.xml/AvoidCatchingGenericException"/ -->
+  <rule
+    ref="rulesets/java/strictexception.xml/AvoidLosingExceptionInformation" />
+  <!--rule ref="rulesets/java/strings.xml/AvoidDuplicateLiterals"/ -->
+  <rule ref="rulesets/java/strings.xml/StringInstantiation" />
+  <rule ref="rulesets/java/strings.xml/StringToString" />
+  <!--rule ref="rulesets/java/strings.xml/InefficientStringBuffering"/ -->
+  <rule ref="rulesets/java/strings.xml/UnnecessaryCaseChange" />
+  <rule ref="rulesets/java/strings.xml/UseStringBufferLength" />
+  <!-- <rule ref="rulesets/java/strings.xml/AppendCharacterWithChar"/> <rule 
+    ref="rulesets/java/strings.xml/ConsecutiveAppendsShouldReuse"/> <rule ref="rulesets/java/strings.xml/ConsecutiveLiteralAppends"/> 
+    <rule ref="rulesets/java/strings.xml/UseIndexOfChar"/> -->
+  <rule ref="rulesets/java/strings.xml/InefficientEmptyStringCheck" />
+  <!-- rule ref="rulesets/java/strings.xml/InsufficientStringBufferDeclaration"/> -->
+  <rule ref="rulesets/java/strings.xml/UselessStringValueOf" />
+  <rule ref="rulesets/java/strings.xml/StringBufferInstantiationWithChar" />
+  <rule ref="rulesets/java/strings.xml/UseEqualsToCompareStrings" />
+  <rule ref="rulesets/java/strings.xml/AvoidStringBufferField" />
+  <!-- <rule ref="rulesets/java/sunsecure.xml/MethodReturnsInternalArray"/> 
+    <rule ref="rulesets/java/sunsecure.xml/ArrayIsStoredDirectly"/> -->
+  <!--rule ref="rulesets/java/typeresolution.xml/LooseCoupling" / -->
+  <rule
+    ref="rulesets/java/typeresolution.xml/CloneMethodMustImplementCloneable" />
+  <rule ref="rulesets/java/typeresolution.xml/UnusedImports" />
+  <rule ref="rulesets/java/unnecessary.xml/UnnecessaryConversionTemporary" />
+  <rule ref="rulesets/java/unnecessary.xml/UnnecessaryReturn" />
+  <rule ref="rulesets/java/unnecessary.xml/UnnecessaryFinalModifier" />
+  <rule ref="rulesets/java/unnecessary.xml/UselessOverridingMethod" />
+  <rule ref="rulesets/java/unnecessary.xml/UselessOperationOnImmutable" />
+  <rule ref="rulesets/java/unnecessary.xml/UnusedNullCheckInEquals" />
+  <!--rule ref="rulesets/java/unnecessary.xml/UselessParentheses"/ -->
+  <rule ref="rulesets/java/unusedcode.xml/UnusedPrivateField" />
+  <rule ref="rulesets/java/unusedcode.xml/UnusedLocalVariable" />
+  <rule ref="rulesets/java/unusedcode.xml/UnusedPrivateMethod" />
+  <rule ref="rulesets/java/unusedcode.xml/UnusedFormalParameter" />
+  <!--rule ref="rulesets/java/unusedcode.xml/UnusedModifier"/ -->
+
+  <!-- custom rules -->
+  <rule name="FeiAvoidPrintStackTrace" message="Avoid printStackTrace(); use a logger call instead."
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      Avoid printStackTrace(); use a logger call instead.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//PrimaryExpression
+[
+  PrimaryPrefix/Name[contains(@Image,'printStackTrace')]
+]
+[
+  PrimarySuffix[not(boolean(Arguments/ArgumentList/Expression))]
+]
+[
+  not(ancestor::node()//PackageDeclaration[ends-with(@PackageNameImage, '.cli')])
+]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+package com.ferguson.service.citools.cli;
+
+class Foo {
+ void bar() {
+  try {
+   // do something
+  } catch (Exception e) {
+   e.printStackTrace();
+  }
+ }
+}
+
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiDoNotCallSystemExit" message="System.exit() should not be used"
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      Web applications and libraries should not call
+      System.exit(), since
+      only the web container or the application server
+      should stop the JVM.
+      This rule also checks for the equivalent call
+      Runtime.getRuntime().exit().
+
+      Note that calling exit is only allowed in
+      main() for command line
+      utilities.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//Name[
+    starts-with(@Image,'System.exit')
+    or
+    (starts-with(@Image,'Runtime.getRuntime') and ../../PrimarySuffix[ends-with(@Image,'exit')])
+]
+[
+    not(ancestor::MethodDeclaration/MethodDeclarator[@Image='main'])
+]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+class Foo {
+    public static void main(final String[] args) {
+      // allowed
+        System.exit(0);
+    }
+
+    public void foo() {
+      // not allowed
+        System.exit(1);
+   }
+}
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiSystemPrintln" message="System.xxx.print* is used, consider using a logger."
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      System.(out|err).print* is used, consider using a logger.
+
+      Note that this is allowed if the package name ends with .cli
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//Name[
+    starts-with(@Image, 'System.out.print')
+    or
+    starts-with(@Image, 'System.err.print')
+ ]
+[
+  not(
+    ancestor::node()//PackageDeclaration[ends-with(@PackageNameImage, '.cli')]
+    or
+    ancestor::node()//PackageDeclaration[ends-with(@PackageNameImage, '.test')]  
+  )
+]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+    public void testA () {
+        System.out.println("Entering test");
+        // Better use this
+        LOG.debug("Entering test");
+    }
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiDontUseJBossLogger"
+    message="org.jboss.logging is used, use org.apache.log4j.Logger instead."
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      Use log4j instead JBoss logger.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//ImportDeclaration[starts-with(@PackageName,'org.jboss.logging')]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+// not allowed
+import org.jboss.logging.*;
+
+// instead use
+import org.apache.log4j.Logger;
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiDontUseSlf4j"
+    message="org.slf4j is used, use org.apache.log4j.Logger instead."
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      Use log4j instead of org.slf4j.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//ImportDeclaration[starts-with(@PackageName,'org.slf4j')]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+// not allowed
+import org.slf4j.*;
+
+// instead use
+import org.apache.log4j.Logger;
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiDontUseCommonLogging"
+    message="org.apache.commons.logging is used, use org.apache.log4j.Logger instead."
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      Use log4j instead of org.apache.commons.logging.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//ImportDeclaration[starts-with(@PackageName,'org.apache.commons.logging')]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+// not allowed
+import org.apache.commons.logging.*;
+
+// instead use
+import org.apache.log4j.Logger;
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiDontUseSysLog"
+    message="java.util.logging is used, use org.apache.log4j.Logger instead."
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      Use log4j instead of java.util.logging.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//ImportDeclaration[starts-with(@PackageName,'java.util.logging')]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+// not allowed
+import java.util.logging.*;
+
+// instead use
+import org.apache.log4j.Logger;
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiUseCorrectExceptionLogging" message="use correct exception logging"
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      To make sure the full stacktrace is printed out, use the
+      logging statement with 2 arguments: a String and a Throwable.
+      This
+      rule only applies to the error and fatal logging levels.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//CatchStatement/Block/BlockStatement/Statement/StatementExpression
+/PrimaryExpression[PrimaryPrefix/Name[starts-with(@Image,
+  concat(ancestor::ClassOrInterfaceDeclaration/ClassOrInterfaceBody/ClassOrInterfaceBodyDeclaration/FieldDeclaration
+  [Type//ClassOrInterfaceType[@Image='Logger']]
+  /VariableDeclarator/VariableDeclaratorId/@Image, '.'))]
+  [ends-with(@Image, 'error') or ends-with(@Image, 'fatal')]
+]
+[
+  PrimarySuffix[@ArgumentCount=1]
+  or 
+  not(PrimarySuffix/Arguments//Name/@Image = ancestor::CatchStatement/FormalParameter/VariableDeclaratorId/@Image)
+]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+    try {
+      LOG.debug("ok");
+    } catch( FirstException e ) {
+      LOG.error( e.getMessage() ); // wrong
+    } catch( SecondException e ) {
+      LOG.error( e.getMessage(), e ); // correct
+    } catch (ThirdException e) {
+      LOG.error(e); // wrong
+    }
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiCamelRestPathStartsWithVersion" message="Camel REST path must start with version number"
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      Camel REST path must start with version number.
+      Note that
+      this rule can only check the path if it is a string literal (ignores
+      variables, constants, etc..).
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//ClassOrInterfaceDeclaration[
+  //ClassOrInterfaceType[typeof(@Image, 'org.apache.camel.builder.RouteBuilder', 'RouteBuilder')]
+]
+//Statement/StatementExpression/PrimaryExpression[PrimaryPrefix/Name[@Image='rest']]
+[PrimarySuffix[1]//Arguments//Literal[not(starts-with(@Image, '"/v'))]]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+public class CamelRoute extends RouteBuilder {
+    public void configure() throws Exception {
+      rest("/v1").id(...
+
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiCamelGobalOnExceptionThrowableDefined" message="onException(Throwable.class) not defined"
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      Camel routes must define a global exception handler to
+      catch Throwable.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//ClassOrInterfaceDeclaration[
+  //ClassOrInterfaceType[
+    typeof(@Image, 'org.apache.camel.builder.RouteBuilder', 'RouteBuilder')
+  ]
+]
+//MethodDeclaration[@MethodName='configure']
+[not(
+  //Statement/StatementExpression/PrimaryExpression[
+    PrimaryPrefix/Name[@Image='onException'] 
+    and
+    PrimarySuffix[1]/Arguments/ArgumentList/Expression/PrimaryExpression/PrimaryPrefix/ResultType/Type[@TypeImage='Throwable']
+  ]
+)]
+[
+  not(ancestor::node()//PackageDeclaration[ends-with(@PackageNameImage, '.test')])
+]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+public class CamelRoute extends RouteBuilder {
+    public void configure() throws Exception {
+        onException(Throwable.class)
+
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiCamelGobalOnExceptionThrowableHandled"
+    message="handled(true) not set for onException(Throwable.class)"
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      Camel routes must enable exception handler to catch
+      Throwable.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//Statement/StatementExpression/PrimaryExpression[
+  PrimaryPrefix/Name[@Image='onException'] 
+  and
+  PrimarySuffix[1]/Arguments/ArgumentList/Expression/PrimaryExpression/PrimaryPrefix/ResultType/Type[@TypeImage='Throwable']
+]
+[not(
+  PrimarySuffix[@Image='handled']/following-sibling::PrimarySuffix[1]/Arguments/ArgumentList/Expression/PrimaryExpression/PrimaryPrefix/Literal/BooleanLiteral[@True='true']
+)]
+[
+  ancestor::MethodDeclaration[@MethodName='configure']
+  /ancestor::ClassOrInterfaceDeclaration[
+    //ClassOrInterfaceType[typeof(@Image, 'org.apache.camel.builder.RouteBuilder', 'RouteBuilder')]
+  ]
+]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+public class CamelRoute extends RouteBuilder {
+    public void configure() throws Exception {
+        onException(Throwable.class).handled(true)
+
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiCamelRouteContextNameDefined" message="@ContextName must be defined for camel route"
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      Camel routes must define a @ContextName.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//ClassOrInterfaceDeclaration[
+    //ClassOrInterfaceType[typeof(@Image, 'org.apache.camel.builder.RouteBuilder', 'RouteBuilder')]
+]
+[not(
+  //TypeDeclaration/Annotation/SingleMemberAnnotation/Name[@Image='ContextName']
+)]
+[
+  not(ancestor::node()//PackageDeclaration[ends-with(@PackageNameImage, '.test')])
+]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+package com.ferguson.service.inventory.cud;
+
+@ContextName("com.ferguson.service.inventory.cud")
+public class CamelRoute extends RouteBuilder {
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiCamelRouteContextNameValue" message="@ContextName does not match package name"
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      The @ContextName for a camel route must match the package
+      name.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//TypeDeclaration/Annotation/SingleMemberAnnotation[Name[@Image='ContextName']]/MemberValue/PrimaryExpression/PrimaryPrefix/Literal[
+  not(@Image=concat('"', //PackageDeclaration/@PackageNameImage, '"'))
+]
+[
+  ancestor::TypeDeclaration/ClassOrInterfaceDeclaration[
+      //ClassOrInterfaceType[typeof(@Image, 'org.apache.camel.builder.RouteBuilder', 'RouteBuilder')]
+  ]
+]
+[
+  not(ancestor::node()//PackageDeclaration[ends-with(@PackageNameImage, '.test')])
+]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+package com.ferguson.service.inventory.cud;
+
+@ContextName("com.ferguson.service.inventory.cud")
+public class CamelRoute extends RouteBuilder {
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiCamelTrace" message="do not enable camel debug tracing"
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      Do not enable camel debug tracing.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//MethodDeclaration/Block/BlockStatement/Statement/StatementExpression/PrimaryExpression[
+  PrimaryPrefix/Name[@Image='getContext']
+  and
+  PrimarySuffix[@Image='setTracing']/following-sibling::PrimarySuffix[1]/Arguments/ArgumentList/Expression/PrimaryExpression/PrimaryPrefix/Literal/BooleanLiteral[@True='true']
+]
+[
+  ancestor::ClassOrInterfaceDeclaration[
+      //ClassOrInterfaceType[typeof(@Image, 'org.apache.camel.builder.RouteBuilder', 'RouteBuilder')]
+  ]
+]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+public class CamelRoute extends RouteBuilder {
+    public void configure() {
+        getContext().setTracing(true); // this produces extremely verbose output
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiCamelServletNameMissing"
+    message="restConfiguration().endpointProperty(&quot;servletName&quot;, artifactId) is missing"
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      restConfiguration().endpointProperty(&quot;servletName&quot;,artifactId) is missing
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//MethodDeclaration/Block/BlockStatement/Statement/StatementExpression/PrimaryExpression[
+  PrimaryPrefix/Name[@Image='restConfiguration']
+  and
+  not(PrimarySuffix[@Image='endpointProperty']/following-sibling::
+  PrimarySuffix/Arguments/ArgumentList/Expression/PrimaryExpression/PrimaryPrefix/Literal[@Image='"servletName"'])
+]
+[
+  ancestor::MethodDeclaration[@MethodName='configure']/
+  ancestor::ClassOrInterfaceDeclaration[
+    //ClassOrInterfaceType[typeof(@Image, 'org.apache.camel.builder.RouteBuilder', 'RouteBuilder')]
+  ]
+]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+public class CamelRoute extends RouteBuilder {
+    public void configure() {
+        restConfiguration().endpointProperty("servletName", artifactId)
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiUseContainerManagedPersistenceContext"
+    message="use container managed persistence context via @PersistenceContext instead of application managed via @PersistenceUnit"
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      Use container managed persistence context via
+      @PersistenceContext instead of application managed via
+      @PersistenceUnit.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//ClassOrInterfaceBodyDeclaration[
+  FieldDeclaration/Type[@TypeImage='EntityManagerFactory']
+  and
+  Annotation//Name[@Image='PersistenceUnit']  
+]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+public class Foo {
+  // incorrect
+    @PersistenceUnit(unitName = "primary")
+    private EntityManagerFactory emf;
+    
+    // correct
+    @PersistenceContext(unitName = "primary")
+    private EntityManager em;
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiSpecifySchemaForTableAnnotation" message="schema attribute not specified for @Table"
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      Explicitly specify schema attribute in @Table annotation
+      for JPA entities.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//TypeDeclaration/Annotation/NormalAnnotation[
+  Name[typeof(@Image, 'javax.persistence.Table', 'Table')]
+  and
+  not(MemberValuePairs/MemberValuePair[@Image='schema'])
+]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+@Entity
+@Table(name = "BRANCH", schema = "ODS_MANAGER")
+public class BranchEntity implements Serializable {
+  ...
+}
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiTestMethodPrefix" message="@Test annotated method name should begin with &quot;test&quot;"
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      @Test annotated method name should begin with &quot;test&quot;.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//ClassOrInterfaceBodyDeclaration
+[
+  MethodDeclaration/MethodDeclarator[not(starts-with(@Image, 'test'))]
+  and
+  Annotation/*/Name[typeof(@Image, 'org.junit.Test', 'Test')]
+  and
+  ancestor::node()//PackageDeclaration[ends-with(@PackageNameImage, '.test')]
+]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+public class FooTest {
+    @Test
+    public void testEqualsContract() {
+      // OK
+    }
+
+    @Test
+    public void equalsContract() {
+      // WRONG
+    }
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiNonTestMethodPrefix" message="method name begins with &quot;test&quot; but is not annotated with @Test"
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      Method name begins with test but is not annotated with @Test.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//ClassOrInterfaceBodyDeclaration
+[
+  MethodDeclaration/MethodDeclarator[starts-with(@Image, 'test')]
+  and
+  not(Annotation/*/Name[typeof(@Image, 'org.junit.Test', 'Test')])
+  and
+  ancestor::node()//PackageDeclaration[ends-with(@PackageNameImage, '.test')]
+]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+public class FooTest {
+    @Test
+    public void testEqualsContract() {
+      // OK
+    }
+
+    public void testMethodWithoutAnnotation() {
+      // WRONG
+    }
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiBeforeClassMethodMethodName" message="@BeforeClass annotated method name should be &quot;beforeClass&quot;"
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      @BeforeClass annotated method should be beforeClass.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//ClassOrInterfaceBodyDeclaration
+[
+  MethodDeclaration/MethodDeclarator[not(@Image='beforeClass')]
+  and
+  Annotation/MarkerAnnotation/Name[typeof(@Image, 'org.junit.BeforeClass', 'BeforeClass')]
+  and
+  ancestor::node()//PackageDeclaration[ends-with(@PackageNameImage, '.test')]
+]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+public class FooTest {
+    @BeforeClass
+    public void beforeClass() {
+      // OK
+    }
+
+    @BeforeClass
+    public void setUp() {
+      // WRONG
+    }
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiNonBeforeClassMethodName" message="method name is &quot;beforeClass&quot; but is not annotated with @BeforeClass"
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      Method name is beforeClass but is not annotated with @BeforeClass.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//ClassOrInterfaceBodyDeclaration
+[
+  MethodDeclaration/MethodDeclarator[@Image='beforeClass']
+  and
+  not(Annotation/MarkerAnnotation/Name[typeof(@Image, 'org.junit.BeforeClass', 'BeforeClass')])
+  and
+  ancestor::node()//PackageDeclaration[ends-with(@PackageNameImage, '.test')]
+]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+public class FooTest {
+    // forgot the @BeforeClass annotation? rename?
+    public void beforeClass() {
+    }
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiAfterClassMethodMethodName" message="@AfterClass annotated method name should be &quot;afterClass&quot;"
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      @AfterClass annotated method should be afterClass.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//ClassOrInterfaceBodyDeclaration
+[
+  MethodDeclaration/MethodDeclarator[not(@Image='afterClass')]
+  and
+  Annotation/MarkerAnnotation/Name[typeof(@Image, 'org.junit.AfterClass', 'AfterClass')]
+  and
+  ancestor::node()//PackageDeclaration[ends-with(@PackageNameImage, '.test')]
+]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+public class FooTest {
+    @AfterClass
+    public void afterClass() {
+      // OK
+    }
+
+    @AfterClass
+    public void setUp() {
+      // WRONG
+    }
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiNonAfterClassMethodName" message="method name is &quot;afterClass&quot; but is not annotated with @AfterClass"
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      Method name is afterClass but is not annotated with @AfterClass.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//ClassOrInterfaceBodyDeclaration
+[
+  MethodDeclaration/MethodDeclarator[@Image='afterClass']
+  and
+  not(Annotation/MarkerAnnotation/Name[typeof(@Image, 'org.junit.AfterClass', 'AfterClass')])
+  and
+  ancestor::node()//PackageDeclaration[ends-with(@PackageNameImage, '.test')]
+]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+public class FooTest {
+    // forgot the @AfterClass annotation? rename?
+    public void afterClass() {
+    }
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiAfterMethodMethodName" message="@After annotated method name should be &quot;after&quot;"
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      @After annotated method should be after.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//ClassOrInterfaceBodyDeclaration
+[
+  MethodDeclaration/MethodDeclarator[not(@Image='after')]
+  and
+  Annotation/MarkerAnnotation/Name[typeof(@Image, 'org.junit.After', 'After')]
+  and
+  ancestor::node()//PackageDeclaration[ends-with(@PackageNameImage, '.test')]
+]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+public class FooTest {
+    @After
+    public void after() {
+      // OK
+    }
+
+    @After
+    public void setUp() {
+      // WRONG
+    }
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiNonAfterMethodName" message="method name is &quot;after&quot; but is not annotated with @After"
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      Method name is after but is not annotated with @After.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//ClassOrInterfaceBodyDeclaration
+[
+  MethodDeclaration/MethodDeclarator[@Image='after']
+  and
+  not(Annotation/MarkerAnnotation/Name[typeof(@Image, 'org.junit.After', 'After')])
+  and
+  ancestor::node()//PackageDeclaration[ends-with(@PackageNameImage, '.test')]
+]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+public class FooTest {
+    // forgot the @After annotation? rename?
+    public void after() {
+    }
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiBeforeMethodMethodName" message="@Before annotated method name should be &quot;before&quot;"
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+       
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//ClassOrInterfaceBodyDeclaration
+[
+  MethodDeclaration/MethodDeclarator[not(@Image='before')]
+  and
+  Annotation/MarkerAnnotation/Name[typeof(@Image, 'org.junit.Before', 'Before')]
+  and
+  ancestor::node()//PackageDeclaration[ends-with(@PackageNameImage, '.test')]
+]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+public class FooTest {
+    @Before
+    public void before() {
+      // OK
+    }
+
+    @Before
+    public void setUp() {
+      // WRONG
+    }
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiNonBeforeMethodName" message="method name is &quot;before&quot; but is not annotated with @Before"
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      Method name is before but is not annotated with @Before.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//ClassOrInterfaceBodyDeclaration
+[
+  MethodDeclaration/MethodDeclarator[@Image='before']
+  and
+  not(Annotation/MarkerAnnotation/Name[typeof(@Image, 'org.junit.Before', 'Before')])
+  and
+  ancestor::node()//PackageDeclaration[ends-with(@PackageNameImage, '.test')]
+]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+public class FooTest {
+    // forgot the @Before annotation? rename?
+    public void before() {
+    }
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiTryWithResources" message="use try-with-resources instead of calling close() explicitly"
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      Use try-with-resources instead of calling close() explicitly.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//Statement/StatementExpression/PrimaryExpression/PrimaryPrefix/Name[
+  ends-with(@Image, '.close')
+  and
+  substring-before(@Image, '.close')=
+    ancestor::MethodDeclaration//LocalVariableDeclaration[
+      Type[not(
+        typeof(@TypeImage, 'com.ferguson.jca.trilogie.TrilogieConnection', 'TrilogieConnection')
+        or
+        typeof(@TypeImage, 'javax.naming.NamingEnumeration', 'NamingEnumeration')
+        or
+        typeof(@TypeImage, 'javax.naming.ldap.InitialLdapContext', 'InitialLdapContext')
+        or
+        typeof(@TypeImage, 'javax.naming.directory.DirContext', 'DirContext')
+        or
+        typeof(@TypeImage, 'org.openqa.selenium.WebDriver', 'WebDriver')
+        or
+        typeof(@TypeImage, 'javax.jms.Connection', 'Connection')
+        or
+        typeof(@TypeImage, 'javax.jms.Session', 'Session')
+        or
+        typeof(@TypeImage, 'javax.jms.MessageConsumer', 'MessageConsumer')
+        or
+        typeof(@TypeImage, 'javax.xml.stream.XMLStreamReader', 'XMLStreamReader')
+        or
+        typeof(@TypeImage, 'javax.jms.QueueConnection', 'QueueConnection')
+        or
+        typeof(@TypeImage, 'javax.jms.QueueSession', 'QueueSession')
+        or
+        typeof(@TypeImage, 'javax.naming.InitialContext', 'InitialContext')
+        or
+        typeof(@TypeImage, 'javax.jms.MessageProducer', 'MessageProducer')
+      )]
+    ]/@VariableName
+]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+/* convert this */
+final InputStream is = new InputStream(new File("foo"));
+try {
+    // do something with stream
+} finally {
+    is.close();
+}
+
+/* into this */
+try (InputStream is = new InputStream(new File("foo"))) {
+    // do something with stream
+}
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiAvoidCatchInTest" message="do not catch exceptions inside JUnit tests"
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      Do not catch exceptions inside JUnit tests.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//CatchStatement[
+  ancestor::node()//PackageDeclaration[ends-with(@PackageNameImage, '.test')]
+  and
+  not(
+    ancestor::node()/ClassOrInterfaceDeclaration[@Image='SplunkMessageFormatterTest']
+    or
+    ancestor::node()/ClassOrInterfaceDeclaration[contains(@Image, 'Faker')]
+    or
+    ancestor::node()//PackageDeclaration[@PackageNameImage='com.ferguson.service.common.camel.test']
+    )
+]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+public class ItemRouteIT {
+    @Test
+    public void testTransNumberSequence() {
+        try {
+            ...
+        } catch (final Exception e) {
+            // WRONG: let exception be handled by JUnit
+        }
+        
+    }
+}
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiArqTestModeAnnotationMissing" message="arquillian test method must be annotated with either @RunAsClient or @OperateOnDeployment"
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      Arquillian test method must be annotated with either @RunAsClient or @OperateOnDeployment.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//TypeDeclaration[
+  Annotation/SingleMemberAnnotation[Name[@Image='RunWith']]/MemberValue/PrimaryExpression/PrimaryPrefix/ResultType/Type[@TypeImage='Arquillian']
+]/ClassOrInterfaceDeclaration/ClassOrInterfaceBody/ClassOrInterfaceBodyDeclaration[
+  Annotation/MarkerAnnotation/Name[@Image='Test']
+]/MethodDeclaration[not(
+  ancestor::ClassOrInterfaceBodyDeclaration/Annotation//Name[
+    @Image='OperateOnDeployment'
+    or 
+    @Image='RunAsClient'
+  ]
+)]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+@RunWith(Arquillian.class)
+public class RouteIT {
+    @Test
+    // need either @RunAsClient or @OperateOnDeployment here
+    public void testSomething() throws Exception {
+      ...
+    }
+}
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiArqMethodAnnotationAtClassLevel" message="arquillian method annotation does not belong at class level"
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      Arquillian method annotation does not belong at class level.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//TypeDeclaration/Annotation//Name[
+    @Image='RunAsClient'
+    or
+    @Image='OperateOnDeployment'
+]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+@RunWith(Arquillian.class)
+@RunAsClient // WRONG: location - it belongs at method level
+public class RouteIT {
+    @Test
+    public void testSomething() throws Exception {
+      ...
+    }
+}
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiAvoidArqResourceAnnotation" message="use IntegrationTestHelper.getAppEndpoint() instead of @ArquillianResource"
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      Use IntegrationTestHelper.getAppEndpoint() instead of @ArquillianResource. 
+      The annotation is intended for embedded mode only.
+      It cannot resolve the correct URL in client mode when there are multiple deployables.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//Annotation//Name[@Image='ArquillianResource']
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+@RunWith(Arquillian.class)
+public class RouteIT {
+   @ArquillianResource // do not use this annotation
+   private URL url;
+}
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiForbidSuppressWarningsAnnotations" message="Annotations to suppress warnings are forbidden" 
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      @SuppressWarnings and @SuppressFBWarnings can be used to circumvent static analysis rules and can propagate bad behavior.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//SingleMemberAnnotation//Name[@Image='SuppressWarnings' or @Image='SuppressFBWarnings']
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+@SuppressWarnings("all") // forbidden
+public class Foo {
+  @SuppressFBWarnings("null") // forbidden
+  public String foo(String x){
+    ...
+  }
+
+  public void bar() {
+    @SuppressWarnings({"unchecked", "rawtypes"}) // forbidden
+    String x = ...
+    ...
+  }
+}
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiDoNotUseThreads" message="To be compliant to J2EE, a webapp should not use any thread." 
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      The J2EE specification explicitly forbid use of threads.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//ClassOrInterfaceType[@Image = 'Thread' or @Image = 'Runnable']
+[
+  not(ancestor::node()//PackageDeclaration[ends-with(@PackageNameImage, '.cli')])
+]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+            // This is not allowed
+            public class UsingThread extends Thread {
+
+            }
+      // Neither this,
+      public class OtherThread implements Runnable {
+        // Nor this ...
+        public void methode() {
+          Runnable thread = new Thread(); thread.run();
+        }
+      }
+
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiCamelDoNotUseDirectVM" message="Do not use direct-vm or vm in camel routes." 
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      Do not use direct-vm or vm in camel routes since it can result in war files having to be deployed in the same JVM.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//Statement//PrimarySuffix[
+  preceding::PrimarySuffix[
+    @Image='to'
+  ]
+  or 
+  preceding::PrimaryPrefix/Name[
+    @Image='from'
+  ]
+
+]/Arguments//Literal[
+  starts-with(@Image, '"direct-vm:')
+  or
+  starts-with(@Image, '"vm:')
+]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+public class Foo extends RouteBuilder {
+  public void configure() {
+    rest(...)
+      // bad
+      .to("direct-vm:postSalesOrder")
+      
+    // also bad
+    from("direct-vm:postSalesOrder")
+  }
+}
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiCamelBindingsInsteadOfHttpURLConnection" message="use camel bindings instead of HttpURLConnection" 
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      Use camel bindings instead of HttpURLConnection.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//Type[@TypeImage='HttpURLConnection']
+  [parent::FieldDeclaration or parent::LocalVariableDeclaration]
+  [
+    not(
+      ancestor::node()//PackageDeclaration[ends-with(@PackageNameImage, '.cli')]
+      or
+      ancestor::node()//PackageDeclaration[contains(@PackageNameImage, 'test')]
+      or
+      ancestor::node()//PackageDeclaration[contains(@PackageNameImage, '.ci.')]
+      or
+      ancestor::node()//PackageDeclaration[contains(@PackageNameImage, 'faker')]
+    )
+  ]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+public class Foo {
+  HttpURLConnection conn;   // fobidden
+  public void foo() {
+    // forbidden
+    HttpURLConnection conn = ...
+  }
+}
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiCamelBindingsInsteadOfApacheHttpClient" message="use camel bindings instead of apache HttpClient" 
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      Use camel bindings instead of Apache HttpClient.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//ImportDeclaration[
+  starts-with(@PackageName, 'org.apache.http.client')
+  or
+  starts-with(@PackageName, 'org.apache.http.impl.client')
+]
+  [
+    not(
+      ancestor::node()//PackageDeclaration[ends-with(@PackageNameImage, '.cli')]
+      or
+      ancestor::node()//PackageDeclaration[contains(@PackageNameImage, 'test')]
+      or
+      ancestor::node()//PackageDeclaration[contains(@PackageNameImage, '.ci.')]
+      or
+      ancestor::node()//PackageDeclaration[contains(@PackageNameImage, 'faker')]
+      or
+      ancestor::node()//ClassOrInterfaceDeclaration[@Image='PopupHttpClientBean']
+    )
+  ]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+public class Foo {
+    public void foo() {
+        // use camel binding instead
+        try (CloseableHttpClient client = HttpClients.createDefault()) {
+          ...
+        }
+    }
+}
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiCamelBindingsInsteadOfJms" message="use camel bindings instead of JMS APIs" 
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      Use camel bindings instead of JMS APIs.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//ImportDeclaration[
+  starts-with(@PackageName, 'javax.jms')
+]
+[
+  not(ends-with(@ImportedName, 'Exception'))
+]
+[
+  not(
+    ancestor::node()//PackageDeclaration[ends-with(@PackageNameImage, '.cli')]
+    or
+    ancestor::node()//PackageDeclaration[contains(@PackageNameImage, 'test')]
+    or
+    ancestor::node()//PackageDeclaration[contains(@PackageNameImage, '.ci.')]
+    or
+    ancestor::node()//PackageDeclaration[contains(@PackageNameImage, 'faker')]
+    or
+    ancestor::node()//PackageDeclaration[contains(@PackageNameImage, 'com.ferguson.service.level3')]
+  )
+]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+public class Foo {
+    public void foo() {
+            // use camel bindings instead of JMS APIs
+            final Connection connection = pooledConnectionFactory.createConnection();
+            connection.start();
+            final Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
+            try {
+                final Destination destination = session.createQueue(queueName);
+                final MessageProducer producer = session.createProducer(destination);
+                ...
+    }
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiCamelBindingsInsteadOfJsch" message="use camel bindings instead of JSch" 
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      Use camel bindings instead of JSch.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//ImportDeclaration[
+  starts-with(@PackageName, 'com.jcraft.jsch')
+]
+  [
+    not(
+      ancestor::node()//PackageDeclaration[ends-with(@PackageNameImage, '.cli')]
+      or
+      ancestor::node()//PackageDeclaration[contains(@PackageNameImage, 'test')]
+      or
+      ancestor::node()//PackageDeclaration[contains(@PackageNameImage, '.ci.')]
+      or
+      ancestor::node()//PackageDeclaration[contains(@PackageNameImage, 'faker')]
+    )
+  ]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+public class Foo {
+    public void foo() {
+        final JSch jsch = new JSch();
+        final Session session = jsch.getSession(...
+        ..
+    }
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiDeprecatedHttpClient" message="use ClosableHttpClient and try-with-resource instead of DefaultHttpClient" 
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      Use ClosableHttpClient and try-with-resource instead of DefaultHttpClient.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//ImportDeclaration[@PackageName='import org.apache.http.impl.client.DefaultHttpClient']
+  [
+    not(
+      ancestor::node()//ClassOrInterfaceDeclaration[@Image='PopupHttpClientBean']
+    )
+  ]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+// incorrect
+final HttpClient client = new DefaultHttpClient();
+
+// correct
+try (CloseableHttpClient client = HttpClientBuilder.create().build()) {
+  ...
+}
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiAvoidThrowingRawExceptionTypes" message="Avoid throwing raw exception types." 
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      Rather than throwing a raw RuntimeException, Throwable, Exception, or Error, use a subclassed exception instead. These types makes it difficult to identify root causes when scaning thru the logs.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//AllocationExpression/ClassOrInterfaceType[
+    @Image='Throwable' 
+    or
+    @Image='Exception'
+    or
+    @Image='Error'
+    or
+    @Image='RuntimeException'
+  ]
+  [
+    not(
+      ancestor::node()//PackageDeclaration[ends-with(@PackageNameImage, '.test')]
+    )
+  ]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+public class Foo {
+public void bar() throws Exception {
+  throw new Exception();
+ }
+}
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiCamelComponentLogDebug" message="camel .log() must be set to DEBUG or TRACE level" 
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      Use the Log Route Policy in camlib-common instead of the camel component. 
+      Refer to middleware logging standards.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//PrimaryExpression[PrimaryPrefix/Name[@Image='from' or @Image='onException']]
+  /PrimarySuffix[preceding-sibling::PrimarySuffix[1][@Image='log']]
+  /Arguments/ArgumentList/Expression[1]//PrimaryExpression[1]
+  /PrimaryPrefix[
+    Name[not(contains(@Image, 'DEBUG') or contains(@Image, 'TRACE'))]
+    or
+    Literal
+  ]
+  [
+    not(
+      ancestor::node()//PackageDeclaration[
+        contains(@PackageNameImage, '.test')
+        or
+        contains(@PackageNameImage, '.faker')
+      ]
+    )
+  ]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+public class CamelRoute extends RouteBuilder {
+    @Override
+    public void configure()  {
+      onException(Throwable.class).log(LoggingLevel.ERROR, "forbidden");
+      onException(Throwable.class).log(LoggingLevel.DEBUG, "allowed");
+
+      from("direct:a").routeId("route a").log(LoggingLevel.INFO,"forbidden");
+      from("direct:b").routeId("route b").log("forbidden");
+      from("direct:c").routeId("route c").log(LoggingLevel.DEBUG,"allowed");
+    }
+}
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiAvoidLogginRoutIdAsCategory" message="camel .log() category/logName must be set to this.getClass().getName()" 
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      By default, the logging category is set to the route id. 
+      It needs to be set to the fully qualified class name name instead.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//PrimaryExpression[PrimaryPrefix/Name[@Image='from' or @Image='onException']]
+  /PrimarySuffix[preceding-sibling::PrimarySuffix[1][@Image='log']]
+  /Arguments/ArgumentList/Expression[2][not(PrimaryExpression[
+    PrimaryPrefix[@ThisModifier='true']
+    and
+    PrimarySuffix[@Image='getClass']
+    and
+    PrimarySuffix[@Image='getName']
+  ])]
+  [
+    not(
+      ancestor::node()//PackageDeclaration[
+        contains(@PackageNameImage, '.test')
+        or
+        contains(@PackageNameImage, '.faker')
+      ]
+    )
+  ]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+public class CamelRoute extends RouteBuilder {
+    @Override
+    public void configure()  {
+      onException(Throwable.class).log(LoggingLevel.DEBUG, "forbidden");
+      onException(Throwable.class).log(LoggingLevel.DEBUG, this.getClass().getName(), "allowed");
+    }
+}
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiAvoidCamelRouteToLog" message="do not route to log component" 
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      Routing to to the log component bypasses the standarized formatting.
+      Refer to middleware logging standards.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//PrimaryExpression[PrimaryPrefix/Name[@Image='from' or @Image='onException']]
+  /PrimarySuffix[preceding-sibling::PrimarySuffix[1][@Image='to']]
+  /Arguments/ArgumentList/Expression/PrimaryExpression
+  /PrimaryPrefix/Literal[starts-with(@Image, '"log:')]
+  [
+    not(
+      ancestor::node()//PackageDeclaration[
+        contains(@PackageNameImage, '.test')
+        or
+        contains(@PackageNameImage, '.faker')
+      ]
+    )
+  ]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+public class CamelRoute extends RouteBuilder {
+    @Override
+    public void configure()  {
+      onException(Throwable.class).to("log:xxx");
+      from("direct:a").to("log:xxx");
+    }
+}
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiAvoidLogLevelOff" message="do not set log Level.OFF -- it does work like you might expect" 
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      Instead of turning off loging, Level.OFF actually prints a log message with the level set to 'OFF'.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//Name[@Image='Level.OFF']
+[
+  ancestor::node()//ImportDeclaration[@ImportedName='org.apache.log4j.Level']
+]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+import org.apache.log4j.Level;
+
+public class CamelRoute extends RouteBuilder {
+    public void configure() throws Exception {
+        
+        onException(DuplicateKeyException.class).handled(true)
+                .setProperty(LoggingRoutePolicy.PROP_STACK_TRACE, constant(false))
+                .setProperty(LoggingRoutePolicy.PROP_LOG_LEVEL, constant(Level.OFF)) // AVOID
+                .end();
+    }
+}
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiAvoidExplictLogCallsField" message="explicit calls to logging can only be done for debug or trace"
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      Don't make explicit log calls; instead rely on the log policy. Debug and trace calls are allowed.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//Statement/StatementExpression/PrimaryExpression/PrimaryPrefix/Name
+  [
+    ends-with(@Image, '.info')
+     or 
+    ends-with(@Image, '.warn')
+     or 
+    ends-with(@Image, '.error')
+  ]
+  [
+     starts-with(@Image,
+       concat(
+          ancestor::ClassOrInterfaceDeclaration//FieldDeclaration[Type//ClassOrInterfaceType[@Image='Logger']]/@VariableName
+          ,
+          '.'
+         )
+      )
+  ]
+  [
+    not(
+      ancestor::node()//PackageDeclaration[
+        contains(@PackageNameImage, '.test')
+        or
+        contains(@PackageNameImage, '.faker')
+      ]
+    )
+  ]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+    LOG.trace("ok");
+    LOG.debug("ok");
+    LOG.info("forbidden");
+    LOG.warn("forbidden");
+    LOG.error("forbidden");
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiAvoidExplictLogCallsLocal" message="explicit calls to logging can only be done for debug or trace"
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      Don't make explicit log calls; instead rely on the log policy. Debug and trace calls are allowed.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//Statement/StatementExpression/PrimaryExpression/PrimaryPrefix/Name
+  [
+    ends-with(@Image, '.info')
+     or 
+    ends-with(@Image, '.warn')
+     or 
+    ends-with(@Image, '.error')
+  ]
+  [
+     starts-with(@Image,
+       concat(
+          ancestor::ClassOrInterfaceDeclaration//LocalVariableDeclaration[Type//ClassOrInterfaceType[@Image='Logger']]//VariableDeclaratorId/@Image
+          ,
+          '.'
+         )
+      )
+  ]
+  [
+    not(
+      ancestor::node()//PackageDeclaration[
+        contains(@PackageNameImage, '.test')
+        or
+        contains(@PackageNameImage, '.faker')
+      ]
+    )
+  ]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+    LOG.trace("ok");
+    LOG.debug("ok");
+    LOG.info("forbidden");
+    LOG.warn("forbidden");
+    LOG.error("forbidden");
+]]>
+    </example>
+  </rule>
+
+  <rule name="FeiUseMongoUtils" message="use MongoUtils in camlib-common-mongo to create MongoClient object" 
+    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+    <description>
+      Use MongoUtils in camlib-common-mongo to create MongoClient object.
+      This ensures connections will be created in a consistent way and
+      provides a single point of maintancance when things need to be updated.
+    </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//AllocationExpression/ClassOrInterfaceType[@Image='MongoClient']
+[
+  not(
+    ancestor::node()//PackageDeclaration/Name[@Image='com.ferguson.service.common.mongo']
+    and
+    ancestor::node()//ClassOrInterfaceDeclaration[@Image='MongoUtils']
+  )
+]
+]]>
+        </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+public class MongoClientProducer {
+    public void createConnection() {
+        ...
+        MongoClient client = new MongoClient(uri) // incorect
+
+        return MongoUtils.createMongoClient(endPoints, user, pw, ...); // correct
+    }
+}
+]]>
+    </example>
+  </rule>
+
+</ruleset>

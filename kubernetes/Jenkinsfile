@@ -1,0 +1,39 @@
+pipeline {
+
+agent {
+  docker { 
+    image "$K8_BUILD_ENV_IMAGE"
+    label 'LINUX_GENERAL'
+    args '-v /app/.m2:/app/.m2'
+  }
+}
+  
+options {
+  timestamps()
+  timeout(activity: true, time: 5)
+  buildDiscarder(logRotator(numToKeepStr: '5'))
+  preserveStashes()
+  skipStagesAfterUnstable()
+  disableConcurrentBuilds()
+}
+
+triggers {
+  pollSCM('H/5 * * * *')
+}
+
+stages {
+  stage('build') {
+    steps {
+      git credentialsId: 'bitbucket', url: "https://bitbucket.org/feidsi/k8ci-static-analysis.git"
+      configFileProvider([configFile(fileId: 'camel_fuse_mvn_settings', replaceTokens: true, variable: 'MVN_SETTINGS_FILE')]) {
+        sh "mvn -B -U clean deploy -Dmaven.repo.local=/app/.m2/repository -s $MVN_SETTINGS_FILE"
+      }
+    }
+  }
+} // end stages
+post {
+  always {
+    step([$class: 'Mailer', notifyEveryUnstableBuild: true, recipients: '$EMAIL_DISTRO', sendToIndividuals: false])
+  }
+}
+} // end pipeline

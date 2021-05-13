@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suppressions PUBLIC
+     "-//Puppy Crawl//DTD Suppressions 1.0//EN"
+     "http://www.puppycrawl.com/dtds/suppressions_1_0.dtd">
+<suppressions>
+
+	<!-- we don't care about these rules in test code -->
+	<suppress checks="MagicNumber" files="^.*[\\/]test[\\/][^\\/]*.java$"/>
+	
+	<!-- springboot applications require a public constructor -->
+	<suppress checks="HideUtilityClassConstructor" files="^.*[\\/]springboot[\\/].+[\\/]ServiceLauncher.java$"/>
+
+</suppressions>

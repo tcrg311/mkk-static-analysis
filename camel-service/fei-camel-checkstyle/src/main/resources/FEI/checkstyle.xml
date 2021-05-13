@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC "-//Puppy Crawl//DTD Check Configuration 1.3//EN"
+    "http://www.puppycrawl.com/dtds/configuration_1_3.dtd">
+
+<module name="Checker">
+	<module name="TreeWalker">
+		<!-- block checks -->
+		<module name="AvoidNestedBlocks">
+			<property name="allowInSwitchCase" value="true" />
+		</module>
+		<module name="EmptyCatchBlock" />
+		<module name="LeftCurly" />
+		<module name="NeedBraces" />
+		<module name="RightCurly" />
+
+		<!-- class design -->
+		<module name="FinalClass" />
+		<module name="HideUtilityClassConstructor" />
+		<module name="InnerTypeLast" />
+		<module name="InterfaceIsType" />
+		<module name="VisibilityModifier" />
+
+		<!-- Code -->
+		<module name="CovariantEquals" />
+		<module name="DeclarationOrder" />
+		<module name="DefaultComesLast" />
+		<module name="EmptyStatement" />
+		<module name="EqualsHashCode" />
+		<module name="ExplicitInitialization" />
+		<module name="FinalLocalVariable">
+			<property name="validateEnhancedForLoopVariable" value="true" />
+			<property name="tokens" value="VARIABLE_DEF,PARAMETER_DEF" />
+		</module>
+		<module name="IllegalToken" />
+		<module name="IllegalType" />
+		<module name="InnerAssignment" />
+		<module name="MagicNumber">
+			<property name="ignoreNumbers" value="-1, 0, 1, 2, 3, 4" />
+			<property name="ignoreHashCodeMethod" value="true" />
+			<property name="ignoreAnnotation" value="true" />
+		</module>
+		<module name="ModifiedControlVariable">
+			<property name="skipEnhancedForLoopVariable" value="true" />
+		</module>
+		<module name="MultipleVariableDeclarations" />
+		<module name="NestedForDepth">
+			<property name="max" value="2" />
+		</module>
+		<module name="NestedIfDepth">
+			<property name="max" value="3" />
+		</module>
+		<module name="NestedTryDepth">
+			<property name="max" value="3" />
+		</module>
+		<module name="NoClone" />
+		<module name="NoFinalizer" />
+		<module name="OneStatementPerLine" />
+		<module name="OverloadMethodsDeclarationOrder" />
+		<module name="PackageDeclaration" />
+		<module name="ParameterAssignment" />
+		<module name="SimplifyBooleanExpression" />
+		<module name="SimplifyBooleanReturn" />
+		<module name="StringLiteralEquality" />
+		<module name="SuperClone" />
+		<module name="SuperFinalize" />
+
+		<!-- imports -->
+		<module name="AvoidStarImport" />
+		<module name="IllegalImport" />
+		<module name="RedundantImport" />
+		<module name="UnusedImports">
+			<property name="processJavadoc" value="true" />
+		</module>
+
+		<!-- miscellaneous -->
+		<module name="ArrayTypeStyle" />
+		<module name="FinalParameters" />
+		<module name="OuterTypeFilename" />
+		<module name="UpperEll" />
+
+		<!-- modifiers -->
+		<module name="ModifierOrder" />
+		<module name="RedundantModifier" />
+
+		<!-- naming conventions -->
+		<module name="ClassTypeParameterName" />
+		<module name="ConstantName" />
+		<module name="InterfaceTypeParameterName" />
+		<module name="LocalFinalVariableName" />
+		<module name="LocalVariableName">
+			<property name="allowOneCharVarInForLoop" value="true" />
+		</module>
+		<module name="MemberName" />
+		<module name="MethodName" />
+		<module name="MethodTypeParameterName" />
+		<module name="PackageName" />
+		<module name="ParameterName" />
+		<module name="StaticVariableName" />
+		<module name="TypeName" />
+
+	</module>
+</module>
